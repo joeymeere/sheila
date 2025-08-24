@@ -12,13 +12,9 @@ pub struct MockCall {
 
 #[derive(Clone)]
 pub struct MockConfig {
-    /// Expected number of calls
     pub expected_calls: Option<usize>,
-    /// Return values for successive calls
     pub return_values: Vec<serde_json::Value>,
-    /// Whether to panic on unexpected calls
     pub panic_on_unexpected: bool,
-    /// Custom validation function
     pub validator: Option<Arc<dyn Fn(&[serde_json::Value]) -> Result<()> + Send + Sync>>,
 }
 
@@ -46,11 +42,8 @@ impl std::fmt::Debug for MockConfig {
 
 #[derive(Default)]
 pub struct MockCollection {
-    /// Mock configurations by function name
     configs: HashMap<String, MockConfig>,
-    /// Call history
     calls: Arc<Mutex<Vec<MockCall>>>,
-    /// Call counts by function name
     call_counts: Arc<Mutex<HashMap<String, usize>>>,
 }
 
@@ -59,12 +52,10 @@ impl MockCollection {
         Self::default()
     }
 
-    /// Register a mock function
     pub fn register_mock<S: Into<String>>(&mut self, function_name: S, config: MockConfig) {
         self.configs.insert(function_name.into(), config);
     }
 
-    /// Record a function call
     pub fn record_call<S: Into<String>>(
         &self,
         function_name: S,
@@ -249,21 +240,18 @@ pub mod global {
     static GLOBAL_MOCKS: std::sync::OnceLock<Arc<Mutex<MockCollection>>> =
         std::sync::OnceLock::new();
 
-    /// Get the global mock registry.
     pub fn global_mocks() -> Arc<Mutex<MockCollection>> {
         GLOBAL_MOCKS
             .get_or_init(|| Arc::new(Mutex::new(MockCollection::new())))
             .clone()
     }
 
-    /// Register a mock function in the global store.
     pub fn set_global_mock<S: Into<String>>(function_name: S, config: MockConfig) {
         let registry = global_mocks();
         let mut registry = registry.lock().unwrap();
         registry.register_mock(function_name, config);
     }
 
-    /// Record a call to a mocked function in the global store.
     pub fn record_mock_call_global<S: Into<String>>(
         function_name: S,
         arguments: Vec<serde_json::Value>,
@@ -273,21 +261,18 @@ pub mod global {
         registry.record_call(function_name, arguments)
     }
 
-    /// Get call count for a function in the global store.
     pub fn call_count_global(function_name: &str) -> usize {
         let registry = global_mocks();
         let registry = registry.lock().unwrap();
         registry.get_call_count(function_name)
     }
 
-    /// Verify all mock expectations in the global store.
     pub fn verify_mocks_global() -> Result<()> {
         let registry = global_mocks();
         let registry = registry.lock().unwrap();
         registry.verify()
     }
 
-    /// Clear all mock history in the global store.
     pub fn clear_mocks_global() {
         let registry = global_mocks();
         let registry = registry.lock().unwrap();

@@ -1,8 +1,5 @@
 use super::*;
 
-/// Builtin reporter that generates reports in CSV format
-///
-/// This reporter requires the `csv` or `reporters` feature to be enabled.
 pub struct CsvReporter {
     metadata: ReportMetadata,
     include_headers: bool,

@@ -1,14 +1,14 @@
 use colored::*;
 use indicatif::{MultiProgress, ProgressBar, ProgressStyle};
 use serde_json;
-use sheila::runners::format_relative_path;
+use sheila::format_relative_path;
 use std::fmt::Write;
 use std::time::Duration;
 use tiny_gradient::{Gradient, GradientStr};
 
 use crate::cli::OutputFormat;
 use crate::discovery::TestFile;
-use crate::utils::Utils;
+use crate::helpers::tag_color;
 
 pub struct OutputFormatter;
 
@@ -24,14 +24,6 @@ impl OutputFormatter {
             title_colored,
             " ".repeat(30 - title.len() / 2),
             separator
-        )
-    }
-
-    pub fn format_section_header(title: &str) -> String {
-        format!(
-            "\n{}\n{}\n",
-            title.bright_white().bold(),
-            "-".repeat(40).dimmed()
         )
     }
 
@@ -316,15 +308,12 @@ impl OutputFormatter {
                                 );
                                 test_line.push_str(&format!(
                                     " {}",
-                                    tag_clr.color(Utils::tag_color(tag_clr.clone()))
+                                    tag_clr.color(tag_color(tag_clr.clone()))
                                 ));
                             }
                         }
 
                         let mut attributes = Vec::new();
-                        if test.ignored {
-                            // Already handled with icon
-                        }
                         if let Some(timeout) = test.timeout {
                             attributes.push(format!("timeout {}s", timeout));
                         }
@@ -353,7 +342,7 @@ impl OutputFormatter {
                 "Found {} files, {} test suites, {} tests ({} ignored)",
                 files.len(),
                 total_suites,
-                total_tests,
+                active_tests,
                 ignored_tests
             )
             .bright_white()
@@ -361,15 +350,5 @@ impl OutputFormatter {
         ));
 
         output
-    }
-
-    pub fn result_gradient(passed: usize, total: usize) -> Gradient {
-        if passed < total / 2 {
-            Gradient::Instagram
-        } else if passed < total / 4 * 3 {
-            Gradient::Morning
-        } else {
-            Gradient::Vice
-        }
     }
 }

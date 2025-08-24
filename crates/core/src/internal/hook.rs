@@ -67,7 +67,6 @@ pub struct Hook {
     pub hook_type: HookType,
     pub function: HookFn,
     pub name: String,
-    /// Whether this hook is required to succeed
     pub required: bool,
 }
 

@@ -8,13 +8,9 @@ use std::sync::Arc;
 
 #[derive(Debug)]
 pub struct FixtureInstance {
-    /// Definition this instance is based on
     pub definition: Arc<FixtureDefinition>,
-    /// The actual fixture value
     pub value: Box<dyn Any + Send + Sync>,
-    /// When this instance was created
     pub created_at: chrono::DateTime<chrono::Utc>,
-    /// Context used to create this instance
     pub context: TestContext,
 }
 
@@ -46,9 +42,7 @@ impl FixtureInstance {
 
 #[derive(Debug, Default)]
 pub struct FixtureManager {
-    /// fixture name -> definition
     definitions: HashMap<String, Arc<FixtureDefinition>>,
-    /// session-scoped instances
     session_fixtures: HashMap<String, Arc<FixtureInstance>>,
     suite_fixtures: HashMap<String, Arc<FixtureInstance>>,
     test_fixtures: HashMap<String, Arc<FixtureInstance>>,

@@ -1,6 +1,6 @@
-use crate::output::OutputFormatter;
+use crate::helpers::OutputFormatter;
+use crate::helpers::get_default_output_dir;
 use crate::process::ProcessManager;
-use crate::utils::Utils;
 use anyhow::Result;
 use std::fs;
 
@@ -18,7 +18,7 @@ pub async fn clear() -> color_eyre::Result<()> {
         Err(e) => errors.push(format!("Failed to initialize process manager: {}", e)),
     }
 
-    match Utils::get_default_output_dir() {
+    match get_default_output_dir() {
         Ok(output_dir) => {
             if output_dir.exists() {
                 match clear_directory(&output_dir) {

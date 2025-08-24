@@ -13,25 +13,19 @@ use std::any::Any;
 pub trait Fixture: Send + Sync + 'static {
     type Output: Send + Sync + 'static;
 
-    /// Setup the fixture
     fn setup(context: TestContext) -> Result<Self::Output>;
-
-    /// Teardown the fixture (default: no-op)
     fn teardown(_value: Self::Output, _context: TestContext) -> Result<()> {
         Ok(())
     }
 
-    /// Get fixture scope (default: `FixtureScope::Test`)
     fn scope() -> FixtureScope {
         FixtureScope::Test
     }
 
-    /// Get fixture dependencies (default: `vec![]`)
     fn dependencies() -> Vec<String> {
         Vec::new()
     }
 
-    /// Convert to `FixtureDefinition`
     fn definition<S: Into<String>>(name: S) -> FixtureDefinition {
         let name = name.into();
 

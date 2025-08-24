@@ -50,9 +50,6 @@ pub trait ReporterExt {
 
 impl<T: Reporter> ReporterExt for T {}
 
-/// Builtin reporter that generates reports in plain text format
-///
-/// This reporter is enabled by default.
 pub struct TextReporter {
     metadata: ReportMetadata,
     show_details: bool,
@@ -73,8 +70,6 @@ impl TextReporter {
         self
     }
 
-    /// Show information about execution time for each test,
-    /// each suite, and the total duration of the run.
     pub fn show_timing(mut self, show: bool) -> Self {
         self.show_timing = show;
         self

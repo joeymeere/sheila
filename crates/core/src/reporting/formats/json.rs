@@ -1,8 +1,5 @@
 use super::*;
 
-/// Builtin reporter that generates reports in JSON format
-///
-/// This reporter requires the `json` or `reporters` feature to be enabled.
 pub struct JsonReporter {
     metadata: ReportMetadata,
     pretty: bool,

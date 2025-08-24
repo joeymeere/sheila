@@ -1,21 +1,15 @@
-# Sheila Testing Framework Configuration
-
 [build]
-target_dir = "target"
-debug_dir = "debug"
-release_dir = "release"
-deps_dir = "deps"
-profile = "debug"
+default_profile = "debug"
 
 [discovery]
-rust_file_extensions = ["rs"]
+file_extensions = ["rs"]
 test_patterns = [
     '#\[sheila::test(?:\([^\)]*\))?\]\s*\n\s*(?:pub\s+)?fn\s+(\w+)',
 ]
 suite_patterns = [
     '#\[sheila::suite(?:\([^\)]*\))?\]\s*\n\s*(?:pub\s+)?struct\s+(\w+)',
 ]
-exclude_patterns = [
+exclude = [
     "target/**",
     "**/.git/**",
     "**/node_modules/**",
@@ -23,32 +17,19 @@ exclude_patterns = [
 
 [reporting]
 output_dir = "test-results"
-formats = ["json", "html", "csv"]
-timestamp_format = "%Y%m%d_%H%M%S"
+report_formats = ["json", "html", "csv"]
+ts_format = "%Y%m%d_%H%M%S"
 
 [runner]
-default_timeout = 30
+timeout = 30
 max_retries = 3
-# parallel_limit = 4  # Uncomment to limit parallel test execution
 
-# Example suite-specific configuration
-[suites.database_tests]
-timeout = 60
-retries = 2
-tags = ["database", "integration"]
-
-[suites.api_tests]
-timeout = 45
-retries = 1
 tags = ["api", "external"]
 
-# Example environment-specific overrides
 [environments.ci]
-parallel_limit = 2
-default_timeout = 120
+timeout = 120
 output_dir = "ci-test-results"
 
 [environments.local]
-parallel_limit = 8
-default_timeout = 30
+timeout = 30
 output_dir = "test-results" 

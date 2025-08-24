@@ -97,7 +97,7 @@ impl FixtureDependencyGraph {
             }
         }
 
-        temp_visited.remove(fixture_name);
+        temp_visited.shift_remove(fixture_name);
         visited.insert(fixture_name.to_string());
         result.push(fixture_name.to_string());
 

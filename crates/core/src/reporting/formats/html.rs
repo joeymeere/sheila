@@ -1,8 +1,5 @@
 use super::*;
 
-/// Builtin reporter that generates reports in HTML format
-///
-/// This reporter requires the `html` or `reporters` feature to be enabled.
 pub struct HtmlReporter {
     metadata: ReportMetadata,
     include_styles: bool,
@@ -28,8 +25,6 @@ impl HtmlReporter {
         self
     }
 
-    /// Show information about execution time for each test,
-    /// each suite, and the total duration of the run.
     pub fn show_timing(mut self, show: bool) -> Self {
         self.show_timing = show;
         self

@@ -1,10 +1,10 @@
 use crate::cli::{OutputFormat, ReportArgs};
-use crate::output::OutputFormatter;
-use crate::utils::Utils;
+use crate::helpers::OutputFormatter;
+use crate::helpers::{format_duration, get_default_output_dir, get_most_recent_report};
 use sheila::runners::RunResult;
 use sheila::{ReportFormat, TestReport};
 use std::fs;
-use std::path::Path;
+use std::path::{Path, PathBuf};
 use tiny_gradient::{Gradient, GradientStr};
 
 use colored::*;
@@ -13,10 +13,9 @@ pub async fn run(mut args: ReportArgs) -> color_eyre::Result<()> {
     let report_path = if let Some(path) = args.path.take() {
         path
     } else {
-        let output_dir =
-            Utils::get_default_output_dir().unwrap_or_else(|_| std::path::PathBuf::from("."));
+        let output_dir = get_default_output_dir().unwrap_or_else(|_| PathBuf::from("."));
 
-        Utils::get_most_recent_report(&output_dir)
+        get_most_recent_report(&output_dir)
             .map_err(|_| {
                 sheila::Error::generic("No reports found. Run tests first to generate a report.")
             })?
@@ -243,10 +242,7 @@ async fn display_run_result(run_result: &RunResult, args: &ReportArgs) -> color_
 
                         if args.verbose {
                             if let Some(duration) = test_result.duration {
-                                println!(
-                                    "    Duration: {}",
-                                    Utils::format_duration(duration).dimmed()
-                                );
+                                println!("    Duration: {}", format_duration(duration).dimmed());
                             }
                         }
 

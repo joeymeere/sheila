@@ -4,6 +4,5 @@ pub mod cli;
 pub mod commands;
 pub mod config;
 pub mod discovery;
-pub mod output;
+pub mod helpers;
 pub mod process;
-pub mod utils;

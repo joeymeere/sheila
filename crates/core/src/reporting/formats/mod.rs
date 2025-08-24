@@ -15,9 +15,6 @@ pub use json::*;
 
 use super::*;
 
-/// Builtin reporter that generates multiple reports from multiple specified reporters.
-///
-/// This reporter is enabled by default.
 pub struct CompositeReporter {
     reporters: Vec<Box<dyn Reporter>>,
 }

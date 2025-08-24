@@ -1,11 +1,11 @@
 use crate::cli::ControlArgs;
-use crate::output::OutputFormatter;
+use crate::helpers::OutputFormatter;
+use crate::helpers::validate_test_id;
 use crate::process::ProcessManager;
-use crate::utils::Utils;
 use colored::*;
 
 pub async fn stop(args: ControlArgs) -> color_eyre::Result<()> {
-    let test_id = Utils::validate_test_id(&args.test_id)?;
+    let test_id = validate_test_id(&args.test_id)?;
     let process_manager = ProcessManager::new()?;
 
     process_manager.load_from_cache().await?;
@@ -59,7 +59,7 @@ pub async fn stop(args: ControlArgs) -> color_eyre::Result<()> {
 }
 
 pub async fn pause(args: ControlArgs) -> color_eyre::Result<()> {
-    let test_id = Utils::validate_test_id(&args.test_id)?;
+    let test_id = validate_test_id(&args.test_id)?;
     let process_manager = ProcessManager::new()?;
 
     process_manager.load_from_cache().await?;
@@ -109,7 +109,7 @@ pub async fn pause(args: ControlArgs) -> color_eyre::Result<()> {
 }
 
 pub async fn resume(args: ControlArgs) -> color_eyre::Result<()> {
-    let test_id = Utils::validate_test_id(&args.test_id)?;
+    let test_id = validate_test_id(&args.test_id)?;
     let process_manager = ProcessManager::new()?;
 
     process_manager.load_from_cache().await?;

@@ -1,6 +1,6 @@
 use crate::cli::ListArgs;
 use crate::discovery::TestDiscovery;
-use crate::output::OutputFormatter;
+use crate::helpers::OutputFormatter;
 
 pub async fn run(args: ListArgs) -> color_eyre::Result<()> {
     let (mb, pb) = OutputFormatter::create_multi_progress("Discovering tests...", None, false);

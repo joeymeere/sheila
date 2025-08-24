@@ -3,9 +3,6 @@ use indexmap::IndexMap;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
-/// Defined parameter set for a single test invocation.
-///
-///
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ParameterSet {
     pub values: IndexMap<String, Value>,
@@ -201,7 +198,6 @@ impl ParameterCollection {
                 let mut param_set = ParameterSet::new();
                 for (i, field) in record.iter().enumerate() {
                     if let Some(header) = headers.get(i) {
-                        // Try to parse as JSON first, fall back to string
                         let value = serde_json::from_str(field)
                             .unwrap_or_else(|_| Value::String(field.to_string()));
                         param_set.values.insert(header.to_string(), value);

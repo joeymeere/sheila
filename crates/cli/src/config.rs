@@ -77,7 +77,6 @@ impl Default for SheilaConfig {
 
 impl SheilaConfig {
     pub fn load() -> Result<Self, Box<dyn std::error::Error>> {
-        // Try to load from sheila.toml, fall back to default
         if let Ok(content) = std::fs::read_to_string("sheila.toml") {
             Ok(toml::from_str(&content)?)
         } else {

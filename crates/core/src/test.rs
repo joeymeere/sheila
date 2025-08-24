@@ -6,8 +6,6 @@ use strum_macros::EnumString;
 
 use std::collections::{HashMap, HashSet};
 use std::fmt;
-
-use std::path::PathBuf;
 use std::time::Duration;
 use uuid::Uuid;
 
@@ -400,12 +398,4 @@ impl TestResult {
     pub fn skipped(&self) -> bool {
         matches!(self.status, TestStatus::Skipped | TestStatus::Ignored)
     }
-}
-
-pub fn format_relative_path(path: &PathBuf) -> String {
-    let current = std::env::current_dir().unwrap();
-    path.strip_prefix(&current)
-        .unwrap()
-        .to_string_lossy()
-        .to_string()
 }

@@ -10,8 +10,6 @@ use std::ops::Deref;
 use std::time::Duration;
 use uuid::Uuid;
 
-/// A test suite is a collection of tests that can be executed together, combined
-/// with scoped fixtures and hooks.
 #[derive(Debug)]
 pub struct TestSuite {
     pub id: Uuid,
@@ -112,18 +110,15 @@ impl TestSuite {
 
     pub fn get_runnable_tests(&self) -> Vec<&Test> {
         if self.attributes.only {
-            // marked "only" -> run all its tests
             return self.tests.values().collect();
         }
 
-        // check if any test is marked "only"
         let only_tests: Vec<&Test> = self.tests.values().filter(|test| test.is_only()).collect();
 
         if !only_tests.is_empty() {
             return only_tests;
         }
 
-        // run non-ignored tests
         self.tests
             .values()
             .filter(|test| !test.should_ignore())
@@ -178,18 +173,15 @@ impl TestSuite {
         self.attributes.timeout
     }
 
-    /// Run the test suite.
     pub fn execute(&mut self) -> Result<SuiteResult> {
         let mut result = SuiteResult::new(self.id, self.name.clone(), self.meta.clone());
         let suite_context = TestContext::new(self.id, self.meta.clone());
 
-        // suite-scoped fixtures
         if let Err(e) = self.fixtures.setup_suite_fixtures(&suite_context) {
             result.finish(Some(e));
             return Ok(result);
         }
 
-        // before_all hooks
         if let Err(e) =
             self.hooks
                 .execute_hooks(&self.hooks.before_all, &suite_context, "before_all")
@@ -204,11 +196,9 @@ impl TestSuite {
             .map(|test| (test.id, test.meta.name.clone(), test.meta.clone()))
             .collect();
 
-        // serially execute all tests
         for (test_id, test_name, test_meta) in runnable_test_info {
             let test_context = TestContext::new(test_id, test_meta.clone());
 
-            // test-scoped fixtures
             if let Err(e) = self.fixtures.setup_test_fixtures(&test_context) {
                 let mut test_result =
                     TestResult::new(test_id, test_name.clone(), test_meta.clone());
@@ -217,7 +207,6 @@ impl TestSuite {
                 continue;
             }
 
-            // before_each hooks
             if let Err(e) =
                 self.hooks
                     .execute_hooks(&self.hooks.before_each, &test_context, "before_each")
@@ -227,12 +216,10 @@ impl TestSuite {
                 test_result.finish(TestStatus::Failed, Some(e));
                 result.add_test_result(test_result);
 
-                // cleanup test-scoped fixtures (even on fail)
                 let _ = self.fixtures.teardown_test_fixtures(&test_context);
                 continue;
             }
 
-            // fire at will!
             let mut test_result = if let Some(test) = self.tests.get(&test_name) {
                 test.execute(test_context.clone())
             } else {
@@ -241,18 +228,15 @@ impl TestSuite {
                 result
             };
 
-            // after_each hooks
             if let Err(e) =
                 self.hooks
                     .execute_hooks(&self.hooks.after_each, &test_context, "after_each")
             {
-                // if a test passed, but after_each failed, then it failed
                 if test_result.passed() {
                     test_result.finish(TestStatus::Failed, Some(e));
                 }
             }
 
-            // teardown test-scoped fixtures
             if let Err(e) = self.fixtures.teardown_test_fixtures(&test_context) {
                 eprintln!("Warning: fixture teardown failed: {}", e);
             }
@@ -260,7 +244,6 @@ impl TestSuite {
             result.add_test_result(test_result);
         }
 
-        // after_all hooks
         if let Err(e) = self
             .hooks
             .execute_hooks(&self.hooks.after_all, &suite_context, "after_all")
@@ -269,7 +252,6 @@ impl TestSuite {
             return Ok(result);
         }
 
-        // teardown suite-scoped fixtures
         if let Err(e) = self.fixtures.teardown_suite_fixtures(&suite_context) {
             result.finish(Some(e));
             return Ok(result);
@@ -290,23 +272,14 @@ impl Deref for TestSuite {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SuiteAttributes {
-    /// Whether to ignore this suite
     pub ignore: bool,
-    /// Whether this suite should be the only one to run
     pub only: bool,
-    /// Number of retries on failure
     pub retries: u32,
-    /// Suite timeout
     pub timeout: Option<Duration>,
-    /// Custom tags for the suite
     pub tags: Vec<String>,
-    /// Suite category
     pub category: Option<String>,
-    /// Parallel execution settings
     pub parallel: bool,
-    /// Maximum concurrent tests
     pub max_concurrent: Option<usize>,
-    /// Custom attributes
     pub custom: HashMap<String, serde_json::Value>,
 }
 
@@ -328,29 +301,17 @@ impl Default for SuiteAttributes {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SuiteResult {
-    /// Suite ID
     pub id: Uuid,
-    /// Suite name
     pub name: String,
-    /// Start time
     pub start_time: DateTime<Utc>,
-    /// End time
     pub end_time: Option<DateTime<Utc>>,
-    /// Duration
     pub duration: Option<Duration>,
-    /// Test results
     pub test_results: Vec<TestResult>,
-    /// Suite metadata
     pub metadata: TestMetadata,
-    /// Total tests
     pub total_tests: usize,
-    /// Passed tests
     pub passed_tests: usize,
-    /// Failed tests
     pub failed_tests: usize,
-    /// Skipped tests
     pub skipped_tests: usize,
-    /// Suite-level error (if any)
     pub error: Option<Error>,
 }
 
