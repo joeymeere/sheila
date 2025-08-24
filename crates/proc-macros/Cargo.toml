@@ -1,0 +1,22 @@
+[package]
+name = "sheila-proc-macros"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+proc-macro = true
+
+[features]
+default = []
+__sheila_test = []
+cargo-test = []
+
+[dependencies]
+proc-macro2 = "1.0"
+quote = "1.0"
+syn = { version = "2.0", features = ["full", "extra-traits"] }
+uuid = { workspace = true }
+serde = { workspace = true }
+
+[dev-dependencies]
+trybuild = "1.0"
