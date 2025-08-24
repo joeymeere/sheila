@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sheila Test Discovery</title>
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; }
+.file { margin-bottom: 30px; border: 1px solid #ddd; border-radius: 8px; }
+.file-header { background: #f8f9fa; padding: 15px; border-bottom: 1px solid #ddd; }
+.suite { margin: 15px; }
+.test { margin-left: 20px; padding: 5px 0; }
+.test.ignored { opacity: 0.6; }
+.tag { background: #e9ecef; padding: 2px 6px; border-radius: 3px; font-size: 0.8em; margin-left: 5px; }
+</style>
+</head>
+<body>
+<h1>Test Discovery Results</h1>
+<div class="file">
+<div class="file-header"><h2>examples/src/filesystem.rs</h2></div>
+<div class="suite">
+<h3>● FileSystemTestSuite</h3>
+<p><em>No tests in this suite</em></p>
+</div>
+<div class="suite">
+<h3>● Standalone Tests</h3>
+<div class="test">
+✓ test_create_and_read_file [line 47]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_append_to_file [line 65]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_copy_file [line 90]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_move_file [line 113]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_delete_file [line 137]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_create_directory [line 156]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_create_nested_directories [line 173]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_list_files_in_directory [line 193]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_delete_directory [line 218]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_get_file_info [line 241]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_file_permissions [line 265]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_large_file_operations [line 294]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_file_not_found_errors [line 333]<span class="tag">["filesystem</span></div>
+<div class="test">
+✓ test_many_small_files [line 351]<span class="tag">["filesystem</span></div>
+</div>
+</div>
+<div class="file">
+<div class="file-header"><h2>examples/src/web_api.rs</h2></div>
+<div class="suite">
+<h3>● ApiTestSuite</h3>
+<p><em>No tests in this suite</em></p>
+</div>
+<div class="suite">
+<h3>● Standalone Tests</h3>
+<div class="test">
+✓ test_get_users_list [line 39]<span class="tag">["api</span></div>
+<div class="test">
+✓ test_get_user_by_id [line 50]<span class="tag">["api</span></div>
+<div class="test">
+✓ test_get_nonexistent_user [line 60]<span class="tag">["api</span></div>
+<div class="test">
+✓ test_create_user [line 70]<span class="tag">["api</span></div>
+<div class="test">
+✓ test_delete_user [line 87]<span class="tag">["api</span></div>
+<div class="test">
+✓ test_user_workflow_integration [line 97]<span class="tag">["api</span></div>
+<div class="test">
+✓ test_flaky_external_service [line 120]<span class="tag">["api</span></div>
+<div class="test">
+✓ test_api_response_time [line 140]<span class="tag">["api</span></div>
+</div>
+</div>
+<div class="file">
+<div class="file-header"><h2>examples/src/db.rs</h2></div>
+<div class="suite">
+<h3>● DatabaseTestSuite</h3>
+<p><em>No tests in this suite</em></p>
+</div>
+<div class="suite">
+<h3>● Standalone Tests</h3>
+<div class="test">
+✓ test_create_user [line 70]<span class="tag">["database</span></div>
+<div class="test">
+✓ test_get_user_by_id [line 84]<span class="tag">["database</span></div>
+<div class="test">
+✓ test_get_nonexistent_user [line 98]<span class="tag">["database</span></div>
+<div class="test">
+✓ test_get_all_users [line 108]<span class="tag">["database</span></div>
+<div class="test">
+✓ test_delete_user [line 122]<span class="tag">["database</span></div>
+<div class="test">
+✓ test_transaction_commit [line 136]<span class="tag">["database</span></div>
+<div class="test">
+✓ test_duplicate_email_validation [line 155]<span class="tag">["database</span></div>
+<div class="test">
+✓ test_run_migrations [line 174]<span class="tag">["database</span></div>
+<div class="test">
+✓ test_bulk_user_creation [line 187]<span class="tag">["database</span></div>
+<div class="test">
+✓ test_database_performance [line 208]<span class="tag">["database</span></div>
+<div class="test">
+✓ test_database_under_load [line 227]<span class="tag">["database</span></div>
+</div>
+</div>
+<div class="file">
+<div class="file-header"><h2>examples/src/basic.rs</h2></div>
+<div class="suite">
+<h3>● MathTestSuite</h3>
+<p><em>No tests in this suite</em></p>
+</div>
+<div class="suite">
+<h3>● Standalone Tests</h3>
+<div class="test">
+✓ test_addition [line 5]</div>
+<div class="test">
+✓ test_subtraction [line 10]</div>
+<div class="test ignored">
+○ test_ignored [line 15]</div>
+<div class="test">
+✓ test_with_timeout [line 20]</div>
+<div class="test">
+✓ test_with_retries [line 25]</div>
+<div class="test">
+✓ test_with_tags [line 30]<span class="tag">["unit</span></div>
+</div>
+</div>
+</body>
+</html>

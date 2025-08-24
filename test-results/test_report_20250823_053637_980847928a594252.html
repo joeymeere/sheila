@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Report</title>
+<style>
+            body { 
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+                margin: 20px; 
+                background: #f8f9fa; 
+            }
+            .header { 
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 30px;
+                border-radius: 10px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .header h1 { margin: 0; font-size: 2.5em; }
+            .header .subtitle { opacity: 0.9; margin-top: 10px; }
+            .summary { 
+                display: grid; 
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+                gap: 20px; 
+                margin-bottom: 30px; 
+            }
+            .summary-card { 
+                background: white; 
+                padding: 20px; 
+                border-radius: 8px; 
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+                text-align: center;
+            }
+            .summary-card .number { font-size: 2em; font-weight: bold; margin-bottom: 5px; }
+            .summary-card .label { color: #666; text-transform: uppercase; font-size: 0.8em; }
+            .passed { color: #28a745; }
+            .failed { color: #dc3545; }
+            .skipped { color: #ffc107; }
+            .suite { 
+                background: white; 
+                margin-bottom: 20px; 
+                border-radius: 8px; 
+                overflow: hidden;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+            }
+            .suite-header { 
+                padding: 15px 20px; 
+                border-bottom: 1px solid #dee2e6; 
+                display: flex; 
+                justify-content: space-between; 
+                align-items: center;
+            }
+            .suite-header.passed { background: #d4edda; }
+            .suite-header.failed { background: #f8d7da; }
+            .suite-title { font-weight: bold; font-size: 1.1em; }
+            .test { 
+                padding: 10px 20px; 
+                border-bottom: 1px solid #f8f9fa; 
+                display: flex; 
+                justify-content: space-between; 
+                align-items: center;
+            }
+            .test:last-child { border-bottom: none; }
+            .test-name { display: flex; align-items: center; }
+            .test-status { margin-right: 10px; font-weight: bold; }
+            .test-details { color: #666; font-size: 0.9em; }
+            .error { 
+                background: #f8f9fa; 
+                padding: 10px 20px; 
+                font-family: 'Courier New', monospace; 
+                font-size: 0.9em; 
+                color: #dc3545;
+                white-space: pre-wrap;
+            }
+            .footer {
+                text-align: center;
+                margin-top: 40px;
+                padding: 20px;
+                color: #666;
+                font-size: 0.9em;
+            }
+        </style></head>
+<body>
+<div class="header">
+<h1>Test Report</h1>
+<div class="subtitle">Generated on 2025-08-23 05:36:37 UTC</div>
+</div>
+<div class="summary">
+<div class="summary-card">
+<div class="number passed">37</div>
+<div class="label">Passed</div>
+</div>
+<div class="summary-card">
+<div class="number failed">7</div>
+<div class="label">Failed</div>
+</div>
+<div class="summary-card">
+<div class="number skipped">0</div>
+<div class="label">Skipped</div>
+</div>
+<div class="summary-card">
+<div class="number">44</div>
+<div class="label">Total</div>
+</div>
+</div>
+<div class="suite">
+<div class="suite-header passed">
+<div class="suite-title">✓ sheila_cli</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>unknown_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+</div>
+<div class="suite">
+<div class="suite-header failed">
+<div class="suite-title">✗ sheila_examples</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>basic::test_addition_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>basic::test_subtraction_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>basic::test_with_tags_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>basic::test_with_timeout_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status failed">✗</span>
+<span>basic::test_ignored_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="error">Test execution failed: Test failed</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>basic::test_with_retries_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>db::test_bulk_user_creation_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>db::test_duplicate_email_validation_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>db::test_get_nonexistent_user_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>db::test_create_user_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>db::test_delete_user_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>db::test_database_performance_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>db::test_run_migrations_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>db::test_get_all_users_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>db::test_get_user_by_id_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>db::test_transaction_commit_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>db::test_database_under_load_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status failed">✗</span>
+<span>filesystem::test_copy_file_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="error">Test execution failed: Test failed</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status failed">✗</span>
+<span>filesystem::test_create_nested_directories_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="error">Test execution failed: Test failed</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>filesystem::test_create_and_read_file_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>filesystem::test_append_to_file_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>filesystem::test_delete_file_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>filesystem::test_get_file_info_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>filesystem::test_file_not_found_errors_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>web_api::test_create_user_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>web_api::test_api_response_time_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>web_api::test_delete_user_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>filesystem::test_create_directory_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>web_api::test_flaky_external_service_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>web_api::test_get_nonexistent_user_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>web_api::test_get_users_list_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status failed">✗</span>
+<span>web_api::test_user_workflow_integration_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="error">Test execution failed: Test failed</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>web_api::test_get_user_by_id_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status failed">✗</span>
+<span>filesystem::test_list_files_in_directory_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="error">Test execution failed: Test failed</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>filesystem::test_large_file_operations_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>filesystem::test_move_file_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>filesystem::test_delete_directory_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status failed">✗</span>
+<span>filesystem::test_many_small_files_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="error">Test execution failed: Test failed</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>filesystem::test_file_permissions_cargo_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+</div>
+<div class="suite">
+<div class="suite-header passed">
+<div class="suite-title">✓ sheila</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>unknown_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+</div>
+<div class="suite">
+<div class="suite-header passed">
+<div class="suite-title">✓ sheila_server</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>tests::test_hello</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+</div>
+<div class="suite">
+<div class="suite-header passed">
+<div class="suite-title">✓ sheila</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status passed">✓</span>
+<span>unknown_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+</div>
+<div class="suite">
+<div class="suite-header failed">
+<div class="suite-title">✗ sheila_proc_macros</div>
+</div>
+<div class="test">
+<div class="test-name">
+<span class="test-status failed">✗</span>
+<span>unknown_test</span>
+</div>
+<div class="test-details">0ms</div>
+</div>
+<div class="error">Test execution failed: Test execution failed</div>
+</div>
+<div class="footer">
+Generated by Sheila Testing Framework v1.0
+</div>
+</body>
+</html>

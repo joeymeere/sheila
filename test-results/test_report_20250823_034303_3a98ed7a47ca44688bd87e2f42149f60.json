@@ -1,0 +1,1309 @@
+{
+  "id": "4fc00fc2-730b-4919-9eb5-b433423132ed",
+  "start_time": "2025-08-23T03:43:03.034969Z",
+  "end_time": "2025-08-23T03:43:03.063187Z",
+  "duration": {
+    "secs": 0,
+    "nanos": 28000000
+  },
+  "suite_results": [
+    {
+      "id": "76bf59a3-4be1-4cf5-ab99-63fe3fe0da71",
+      "name": "sheila_cli",
+      "start_time": "2025-08-23T03:43:03.037794Z",
+      "end_time": "2025-08-23T03:43:03.037806Z",
+      "duration": {
+        "secs": 0,
+        "nanos": 0
+      },
+      "test_results": [
+        {
+          "id": "461edca6-b228-43da-96b0-2360346e8868",
+          "name": "unknown_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.037803Z",
+          "end_time": "2025-08-23T03:43:03.037803Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "unknown_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        }
+      ],
+      "metadata": {
+        "name": "sheila_cli",
+        "description": null,
+        "author": null,
+        "version": null,
+        "annotations": {},
+        "file": null,
+        "line": null,
+        "module_path": null
+      },
+      "total_tests": 1,
+      "passed_tests": 1,
+      "failed_tests": 0,
+      "skipped_tests": 0,
+      "error": null
+    },
+    {
+      "id": "13570dcd-bb81-4b47-ba56-f0f79d3c96bb",
+      "name": "sheila_examples",
+      "start_time": "2025-08-23T03:43:03.054725Z",
+      "end_time": "2025-08-23T03:43:03.054877Z",
+      "duration": {
+        "secs": 0,
+        "nanos": 0
+      },
+      "test_results": [
+        {
+          "id": "980b37bd-91e1-4554-9ac5-362cc04a48fc",
+          "name": "basic::test_addition_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054737Z",
+          "end_time": "2025-08-23T03:43:03.054737Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "basic::test_addition_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "306e1894-bdcd-4782-b30b-a6586a7b85f9",
+          "name": "basic::test_subtraction_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054742Z",
+          "end_time": "2025-08-23T03:43:03.054742Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "basic::test_subtraction_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "9f33060a-3eca-4932-8ce9-e37468cb5afa",
+          "name": "basic::test_with_timeout_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054745Z",
+          "end_time": "2025-08-23T03:43:03.054745Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "basic::test_with_timeout_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "3e6dc2b7-377c-4a6a-9f56-57d266d497e1",
+          "name": "basic::test_with_tags_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054748Z",
+          "end_time": "2025-08-23T03:43:03.054748Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "basic::test_with_tags_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "3286a83c-5d4d-4ed8-8521-00065576e958",
+          "name": "basic::test_ignored_cargo_test",
+          "status": "Failed",
+          "start_time": "2025-08-23T03:43:03.054751Z",
+          "end_time": "2025-08-23T03:43:03.054751Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "basic::test_ignored_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "30ccdee7-0b15-4ea8-a42f-92d2739d5f15",
+          "name": "basic::test_with_retries_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054754Z",
+          "end_time": "2025-08-23T03:43:03.054755Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "basic::test_with_retries_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "0af287e3-8d93-46cc-afd9-dcbe053e151d",
+          "name": "db::test_bulk_user_creation_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054757Z",
+          "end_time": "2025-08-23T03:43:03.054758Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "db::test_bulk_user_creation_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "e12129d1-61f6-4c1d-a452-8ce255e9bd81",
+          "name": "db::test_create_user_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054760Z",
+          "end_time": "2025-08-23T03:43:03.054760Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "db::test_create_user_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "760103ad-5d09-4f8b-9472-8f930d7d19bb",
+          "name": "db::test_get_all_users_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054763Z",
+          "end_time": "2025-08-23T03:43:03.054763Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "db::test_get_all_users_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "fa325c2d-2d0e-4992-9abd-ca2d784dfa7a",
+          "name": "db::test_delete_user_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054766Z",
+          "end_time": "2025-08-23T03:43:03.054766Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "db::test_delete_user_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "ca2b9009-adc0-4f36-aa53-ebcdf91573d9",
+          "name": "db::test_duplicate_email_validation_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054770Z",
+          "end_time": "2025-08-23T03:43:03.054770Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "db::test_duplicate_email_validation_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "5ebee8f8-7e87-4dc6-be5f-7301cd750c0c",
+          "name": "db::test_database_performance_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054773Z",
+          "end_time": "2025-08-23T03:43:03.054773Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "db::test_database_performance_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "1d155c46-d69c-4cd6-a1a3-b059acff7b34",
+          "name": "db::test_get_user_by_id_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054776Z",
+          "end_time": "2025-08-23T03:43:03.054776Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "db::test_get_user_by_id_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "f872c9cb-9d47-4160-990a-5c7e16fdfbcc",
+          "name": "db::test_get_nonexistent_user_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054779Z",
+          "end_time": "2025-08-23T03:43:03.054779Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "db::test_get_nonexistent_user_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "7cc9d535-ff60-4eb5-9500-3670686b4b1c",
+          "name": "db::test_transaction_commit_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054782Z",
+          "end_time": "2025-08-23T03:43:03.054782Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "db::test_transaction_commit_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "4e0bf3a3-236f-4409-973b-c1e556f51676",
+          "name": "db::test_run_migrations_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054785Z",
+          "end_time": "2025-08-23T03:43:03.054785Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "db::test_run_migrations_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "251620d4-d08d-48db-ab99-ac9ec86de5ec",
+          "name": "db::test_database_under_load_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054788Z",
+          "end_time": "2025-08-23T03:43:03.054788Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "db::test_database_under_load_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "e301ef82-79a3-471d-854e-8eb1e447810e",
+          "name": "filesystem::test_delete_directory_cargo_test",
+          "status": "Failed",
+          "start_time": "2025-08-23T03:43:03.054791Z",
+          "end_time": "2025-08-23T03:43:03.054791Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_delete_directory_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "86b549c5-70bd-4318-9c8e-dd1c3f6ffc94",
+          "name": "filesystem::test_copy_file_cargo_test",
+          "status": "Failed",
+          "start_time": "2025-08-23T03:43:03.054795Z",
+          "end_time": "2025-08-23T03:43:03.054795Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_copy_file_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "7d9d95c3-4078-4108-81f6-7a7df33aef01",
+          "name": "filesystem::test_append_to_file_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054798Z",
+          "end_time": "2025-08-23T03:43:03.054798Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_append_to_file_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "992666d8-2fe4-40eb-b094-66e13a4ec6b5",
+          "name": "filesystem::test_file_permissions_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054801Z",
+          "end_time": "2025-08-23T03:43:03.054801Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_file_permissions_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "f2c8a526-7885-43ae-b937-9674eb0682d5",
+          "name": "filesystem::test_delete_file_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054804Z",
+          "end_time": "2025-08-23T03:43:03.054804Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_delete_file_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "d61553aa-e1b6-4ca4-95f8-83059c53f288",
+          "name": "filesystem::test_create_directory_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054807Z",
+          "end_time": "2025-08-23T03:43:03.054807Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_create_directory_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "09d75fd6-af0b-4cee-b72b-cceaafe27b3b",
+          "name": "web_api::test_api_response_time_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054810Z",
+          "end_time": "2025-08-23T03:43:03.054810Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "web_api::test_api_response_time_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "ff52225a-54f6-4221-a3ad-7a6f02d88773",
+          "name": "filesystem::test_file_not_found_errors_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054814Z",
+          "end_time": "2025-08-23T03:43:03.054814Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_file_not_found_errors_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "948f75cc-cb6b-4168-b89a-6af75188a42c",
+          "name": "web_api::test_delete_user_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054817Z",
+          "end_time": "2025-08-23T03:43:03.054817Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "web_api::test_delete_user_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "c8dc4e64-65b4-45df-b4a7-f827f1afefa8",
+          "name": "web_api::test_create_user_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054820Z",
+          "end_time": "2025-08-23T03:43:03.054820Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "web_api::test_create_user_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "47741bdd-d201-4f83-9302-850a69e04cc6",
+          "name": "filesystem::test_create_nested_directories_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054823Z",
+          "end_time": "2025-08-23T03:43:03.054823Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_create_nested_directories_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "18068876-6d34-4c0c-a1da-b3bafc6fa94e",
+          "name": "web_api::test_get_nonexistent_user_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054826Z",
+          "end_time": "2025-08-23T03:43:03.054826Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "web_api::test_get_nonexistent_user_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "9c9f61b4-f8c7-402c-b054-317c1cfca36d",
+          "name": "web_api::test_flaky_external_service_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054830Z",
+          "end_time": "2025-08-23T03:43:03.054830Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "web_api::test_flaky_external_service_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "b0f7dc18-ab47-458a-a5b1-07353ca9adbf",
+          "name": "web_api::test_get_user_by_id_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054833Z",
+          "end_time": "2025-08-23T03:43:03.054833Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "web_api::test_get_user_by_id_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "893ae50a-ca85-4cfc-8fd0-7dfa0b103000",
+          "name": "web_api::test_get_users_list_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054836Z",
+          "end_time": "2025-08-23T03:43:03.054836Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "web_api::test_get_users_list_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "6e34813f-25d9-4f66-85e7-1fadd302074f",
+          "name": "web_api::test_user_workflow_integration_cargo_test",
+          "status": "Failed",
+          "start_time": "2025-08-23T03:43:03.054839Z",
+          "end_time": "2025-08-23T03:43:03.054839Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "web_api::test_user_workflow_integration_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "7283692e-b9c7-417b-b87e-3020f12bc45d",
+          "name": "filesystem::test_create_and_read_file_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054844Z",
+          "end_time": "2025-08-23T03:43:03.054844Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_create_and_read_file_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "d2829ea7-16fd-4631-862a-d857d8b31f25",
+          "name": "filesystem::test_get_file_info_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054847Z",
+          "end_time": "2025-08-23T03:43:03.054848Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_get_file_info_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "0fe3c836-700d-4fb7-9a7b-a677c0accf35",
+          "name": "filesystem::test_move_file_cargo_test",
+          "status": "Failed",
+          "start_time": "2025-08-23T03:43:03.054851Z",
+          "end_time": "2025-08-23T03:43:03.054851Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_move_file_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "2fa80c43-4a94-4e93-9e72-6d4c4d314d53",
+          "name": "filesystem::test_list_files_in_directory_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054854Z",
+          "end_time": "2025-08-23T03:43:03.054854Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_list_files_in_directory_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "2b13be00-6b96-42de-966f-a8ac1ad58c86",
+          "name": "filesystem::test_large_file_operations_cargo_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.054859Z",
+          "end_time": "2025-08-23T03:43:03.054859Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_large_file_operations_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        },
+        {
+          "id": "91dadd0c-e62a-4cc4-8691-bded6ca71fdd",
+          "name": "filesystem::test_many_small_files_cargo_test",
+          "status": "Failed",
+          "start_time": "2025-08-23T03:43:03.054863Z",
+          "end_time": "2025-08-23T03:43:03.054863Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "filesystem::test_many_small_files_cargo_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        }
+      ],
+      "metadata": {
+        "name": "sheila_examples",
+        "description": null,
+        "author": null,
+        "version": null,
+        "annotations": {},
+        "file": null,
+        "line": null,
+        "module_path": null
+      },
+      "total_tests": 39,
+      "passed_tests": 33,
+      "failed_tests": 6,
+      "skipped_tests": 0,
+      "error": null
+    },
+    {
+      "id": "fa745f4b-9439-46dc-914f-f40ed3c2b7df",
+      "name": "sheila_server",
+      "start_time": "2025-08-23T03:43:03.056609Z",
+      "end_time": "2025-08-23T03:43:03.056619Z",
+      "duration": {
+        "secs": 0,
+        "nanos": 0
+      },
+      "test_results": [
+        {
+          "id": "24b17f95-666e-4f52-978d-7287af49c6f4",
+          "name": "tests::test_hello",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.056616Z",
+          "end_time": "2025-08-23T03:43:03.056616Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "tests::test_hello",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        }
+      ],
+      "metadata": {
+        "name": "sheila_server",
+        "description": null,
+        "author": null,
+        "version": null,
+        "annotations": {},
+        "file": null,
+        "line": null,
+        "module_path": null
+      },
+      "total_tests": 1,
+      "passed_tests": 1,
+      "failed_tests": 0,
+      "skipped_tests": 0,
+      "error": null
+    },
+    {
+      "id": "379099f9-2a15-466b-ac16-f45e803654a4",
+      "name": "sheila",
+      "start_time": "2025-08-23T03:43:03.059050Z",
+      "end_time": "2025-08-23T03:43:03.059066Z",
+      "duration": {
+        "secs": 0,
+        "nanos": 0
+      },
+      "test_results": [
+        {
+          "id": "e9281c52-5a38-40e1-9428-ad676481d21d",
+          "name": "unknown_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.059061Z",
+          "end_time": "2025-08-23T03:43:03.059061Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "unknown_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        }
+      ],
+      "metadata": {
+        "name": "sheila",
+        "description": null,
+        "author": null,
+        "version": null,
+        "annotations": {},
+        "file": null,
+        "line": null,
+        "module_path": null
+      },
+      "total_tests": 1,
+      "passed_tests": 1,
+      "failed_tests": 0,
+      "skipped_tests": 0,
+      "error": null
+    },
+    {
+      "id": "f68c75c5-bd05-4a08-89a8-bbcf714bbf84",
+      "name": "sheila",
+      "start_time": "2025-08-23T03:43:03.061604Z",
+      "end_time": "2025-08-23T03:43:03.061610Z",
+      "duration": {
+        "secs": 0,
+        "nanos": 0
+      },
+      "test_results": [
+        {
+          "id": "dda7e91b-b8fe-4ded-98f5-dc1f8be01bf8",
+          "name": "unknown_test",
+          "status": "Passed",
+          "start_time": "2025-08-23T03:43:03.061608Z",
+          "end_time": "2025-08-23T03:43:03.061608Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": null,
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "unknown_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        }
+      ],
+      "metadata": {
+        "name": "sheila",
+        "description": null,
+        "author": null,
+        "version": null,
+        "annotations": {},
+        "file": null,
+        "line": null,
+        "module_path": null
+      },
+      "total_tests": 1,
+      "passed_tests": 1,
+      "failed_tests": 0,
+      "skipped_tests": 0,
+      "error": null
+    },
+    {
+      "id": "eb843bec-70d8-420e-912c-19eb34144cba",
+      "name": "sheila_proc_macros",
+      "start_time": "2025-08-23T03:43:03.063175Z",
+      "end_time": "2025-08-23T03:43:03.063186Z",
+      "duration": {
+        "secs": 0,
+        "nanos": 0
+      },
+      "test_results": [
+        {
+          "id": "7e97b795-5d3e-4d6d-9da5-2d764661a13e",
+          "name": "unknown_test",
+          "status": "Failed",
+          "start_time": "2025-08-23T03:43:03.063185Z",
+          "end_time": "2025-08-23T03:43:03.063185Z",
+          "duration": {
+            "secs": 0,
+            "nanos": 0
+          },
+          "error": {
+            "TestExecution": {
+              "message": "dyld[98046]: Library not loaded: @rpath/libstd-cf9513956a0ec8f8.dylib\n  Referenced from: <B0E00DCB-20D4-3FB4-B454-4485E0B51EDF> /Users/jm/Desktop/Projects/Galaxy/sheila/target/debug/deps/sheila_proc_macros-6f85ef50e2e4090a\n  Reason: no LC_RPATH's found\n"
+            }
+          },
+          "stdout": null,
+          "stderr": null,
+          "retry_count": 0,
+          "metadata": {
+            "name": "unknown_test",
+            "description": null,
+            "author": null,
+            "version": null,
+            "annotations": {},
+            "file": null,
+            "line": null,
+            "module_path": null
+          }
+        }
+      ],
+      "metadata": {
+        "name": "sheila_proc_macros",
+        "description": null,
+        "author": null,
+        "version": null,
+        "annotations": {},
+        "file": null,
+        "line": null,
+        "module_path": null
+      },
+      "total_tests": 1,
+      "passed_tests": 0,
+      "failed_tests": 1,
+      "skipped_tests": 0,
+      "error": null
+    }
+  ],
+  "config": {
+    "max_concurrent_suites": 4,
+    "default_test_timeout": {
+      "secs": 30,
+      "nanos": 0
+    },
+    "default_suite_timeout": {
+      "secs": 300,
+      "nanos": 0
+    },
+    "fail_fast": false,
+    "parallel": true,
+    "include_patterns": [],
+    "exclude_patterns": [],
+    "include_tags": [],
+    "exclude_tags": [],
+    "include_categories": [],
+    "exclude_categories": [],
+    "output_dir": "./test-results",
+    "capture_output": true,
+    "env": {},
+    "custom": {}
+  },
+  "total_suites": 6,
+  "passed_suites": 4,
+  "failed_suites": 2,
+  "skipped_suites": 0,
+  "total_tests": 44,
+  "passed_tests": 37,
+  "failed_tests": 7,
+  "skipped_tests": 0,
+  "error": null
+}

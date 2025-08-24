@@ -1,0 +1,12 @@
+[package]
+name = "sheila-examples"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+sheila = { path = "../crates/core", features = ["macros"] }
+sheila-proc-macros = { path = "../crates/proc-macros" }
+rand = { workspace = true }
+
+[dev-dependencies]
+sheila = { path = "../crates/core", features = ["macros"] }
