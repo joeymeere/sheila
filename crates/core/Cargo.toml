@@ -32,7 +32,7 @@ parking_lot = "0.12.4"
 nom = "8.0.0"
 
 mio = { version = "1.0", features = ["os-poll", "net"] }
-libc = "0.2.175"
+libc.workspace = true
 
 thiserror.workspace = true
 indexmap = { workspace = true, features = ["serde"] }
